@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <b-tabs>
+    <b-tabs :animated="false">
       <b-tab-item
         v-for="(player, playerIndex) in players"
         :key="'player'+playerIndex"

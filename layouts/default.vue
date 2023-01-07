@@ -6,10 +6,10 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <NuxtLink to="/"  class="navbar-item">
           <b-icon icon="cards" class="mr-3" />
           Rentz score
-        </a>
+        </NuxtLink>
       </div>
     </nav>
 

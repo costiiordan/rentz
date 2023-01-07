@@ -4,8 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _59b60dee = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
-const _50879234 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _65756e69 = () => interopDefault(import('../pages/game.vue' /* webpackChunkName: "pages/game" */))
+const _7626f4a0 = () => interopDefault(import('../pages/set-players.vue' /* webpackChunkName: "pages/set-players" */))
+const _f8d09854 = () => interopDefault(import('../pages/sub-game.vue' /* webpackChunkName: "pages/sub-game" */))
+const _3feaf52a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -19,12 +21,20 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/inspire",
-    component: _59b60dee,
-    name: "inspire"
+    path: "/game",
+    component: _65756e69,
+    name: "game"
+  }, {
+    path: "/set-players",
+    component: _7626f4a0,
+    name: "set-players"
+  }, {
+    path: "/sub-game",
+    component: _f8d09854,
+    name: "sub-game"
   }, {
     path: "/",
-    component: _50879234,
+    component: _3feaf52a,
     name: "index"
   }],
 

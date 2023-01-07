@@ -1,6 +1,6 @@
 export { default as Card } from '../../components/Card.vue'
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as Tutorial } from '../../components/Tutorial.vue'
+export { default as NegativeSubGame } from '../../components/NegativeSubGame.vue'
+export { default as PositiveSubGame } from '../../components/PositiveSubGame.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

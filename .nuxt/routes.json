@@ -1,16 +1,30 @@
 [
   {
-    "name": "inspire",
-    "path": "/inspire",
-    "component": "/home/costi/projects/rentz/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_59b60dee"
+    "name": "game",
+    "path": "/game",
+    "component": "/home/constantin/projects/rentz/pages/game.vue",
+    "chunkName": "pages/game",
+    "_name": "_65756e69"
+  },
+  {
+    "name": "set-players",
+    "path": "/set-players",
+    "component": "/home/constantin/projects/rentz/pages/set-players.vue",
+    "chunkName": "pages/set-players",
+    "_name": "_7626f4a0"
+  },
+  {
+    "name": "sub-game",
+    "path": "/sub-game",
+    "component": "/home/constantin/projects/rentz/pages/sub-game.vue",
+    "chunkName": "pages/sub-game",
+    "_name": "_f8d09854"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/costi/projects/rentz/pages/index.vue",
+    "component": "/home/constantin/projects/rentz/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_50879234"
+    "_name": "_3feaf52a"
   }
 ]

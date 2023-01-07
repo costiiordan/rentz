@@ -27,7 +27,7 @@
 
     </b-table>
 
-    <b-table :data="scoreMatrix" :bordered="true" :mobile-cards="false">
+    <b-table :data="scoreMatrix" :bordered="true" :mobile-cards="false" class="mt-3">
 
       <b-table-column
         v-for="(player, index) in ['Joc', 'Ales de', ...players]"

@@ -5,22 +5,25 @@
       :key="'players'+playerIndex"
       class="mb-4"
     >
-      <div class="mb-2 is-size-5 has-text-weight-bold">{{ player }}</div>
+      <div class="mb-2">{{ player }}</div>
       <div class="block">
-        <b-checkbox
+        <b-button
           v-for="(order, orderIndex) in players"
           :key="'order'+orderIndex+'player'+playerIndex"
-          v-model="finishOrderMatrix[playerIndex][orderIndex]"
-          :name="'player'+playerIndex"
+          :type="finishOrderMatrix[playerIndex][orderIndex] ? 'is-success' : 'is-primary'"
+          @click="setFinishOrder(playerIndex,orderIndex)"
           :disabled="isOptionDisabled(playerIndex, orderIndex)"
-          :native-value="orderIndex"
-        >{{ orderIndex + 1 }}</b-checkbox>
+          class="mr-3">
+          {{ orderIndex + 1 }}
+        </b-button>
       </div>
     </div>
 
-    <b-button type="is-primary" @click="save()" :disabled="!canSave">Salveaza</b-button>
+    <div class="buttons mt-5">
+      <b-button type="is-primary" @click="save()" :disabled="!canSave">Salveaza</b-button>
 
-    <b-button tag="router-link" to="/game">Inapoi</b-button>
+      <b-button tag="router-link" to="/game">Inapoi</b-button>
+    </div>
   </section>
 </template>
 
@@ -48,8 +51,8 @@ export default {
 
     finishOrder() {
       return this.finishOrderMatrix
-          .map(playerFinishOrder => playerFinishOrder.indexOf(true))
-          .map(value => value === -1 ? null : value);
+        .map(playerFinishOrder => playerFinishOrder.indexOf(true))
+        .map(value => value === -1 ? null : value);
     }
   },
   created() {
@@ -84,6 +87,14 @@ export default {
       this.saveGameRound(gameRound);
 
       this.$router.push('/game');
+    },
+
+    setFinishOrder(playerIndex, orderIndex) {
+      const finishOrderMatrixRow = this.finishOrderMatrix[playerIndex];
+
+      finishOrderMatrixRow[orderIndex] = !finishOrderMatrixRow[orderIndex];
+
+      this.$set(this.finishOrderMatrix, playerIndex, finishOrderMatrixRow);
     },
 
     isOptionDisabled(playerIndex, orderIndex) {

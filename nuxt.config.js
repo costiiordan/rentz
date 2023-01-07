@@ -50,5 +50,13 @@ export default {
 
   router: {
     middleware: 'init'
+  },
+
+  pwa: {
+    manifest: {
+      name: 'Rentz Score',
+      short_name: 'Rentz Score',
+      description: 'Rentz card game score keeping app.',
+    }
   }
 }

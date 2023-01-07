@@ -2,7 +2,7 @@
   <section class="section">
     <div class="columns is-mobile">
       <card title="Joc nou" icon="cards">
-        <b-button type="is-primary" @click="newGame()">Joc Nou</b-button>
+        <b-button type="is-primary" @click="newGame()">Joc nou</b-button>
       </card>
       <card title="Continua joc" icon="cards-club">
         <b-button type="is-primary" :disabled="!players.length" tag="router-link" to="/game">Continua joc</b-button>

@@ -45,9 +45,9 @@
     </div>
 
     <div class="buttons">
-      <b-button v-if="subGamesLeftToPlay > 0" tag="router-link" to="/set-players">Modifica jucatori</b-button>
       <b-button v-else type="is-primary" @click="newGame()">Joc Nou</b-button>
-      <button v-if="subGameRounds.length > 0" class="button is-danger is-outlined" @click="openDeleteLastRoundConfirmationModal()">Sterge unltima runda</button>
+      <button v-if="subGameRounds.length > 0" class="button is-danger is-outlined" @click="openDeleteLastRoundConfirmationModal()">Sterge ultima runda</button>
+      <b-button v-if="subGamesLeftToPlay > 0" tag="router-link" to="/set-players">Modifica jucatori</b-button>
     </div>
 
     <b-modal

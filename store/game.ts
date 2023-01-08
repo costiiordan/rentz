@@ -74,6 +74,9 @@ export const mutations = {
     addSubGameRounds(state: State, subGameRounds: Array<SubGameRound>) {
         state.subGameRounds = subGameRounds;
     },
+    deleteLastSubGameRound(state: State) {
+        state.subGameRounds.pop();
+    },
     deleteSubGameRounds(state: State) {
         state.subGameRounds = [];
     }
@@ -99,6 +102,10 @@ export const actions = {
     },
     saveGameRound({ commit, dispatch }: ActionContext<State, {}>, subGameRound: SubGameRound): void {
         commit("addSubGameRound", subGameRound);
+        dispatch("saveGame");
+    },
+    deleteLastSubGameRound({ commit, dispatch }: ActionContext<State, {}>): void {
+        commit("deleteLastSubGameRound");
         dispatch("saveGame");
     },
     restartGame({ commit, dispatch }: ActionContext<State, {}>) {
